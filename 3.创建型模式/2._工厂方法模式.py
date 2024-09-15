@@ -1,33 +1,33 @@
 from abc import ABCMeta, abstractmethod
 
-# ³éÏó²úÆ·½ÇÉ«
+# æŠ½è±¡äº§å“è§’è‰²
 class Payment(metaclass=ABCMeta):
     @abstractmethod
     def pay(self, money):
         pass
 
-# ¾ßÌå²úÆ·½ÇÉ«
+# å…·ä½“äº§å“è§’è‰²
 class Alipay(Payment):
     def __init__(self, use_huabei=False):
         self.use_huabei = use_huabei
 
     def pay(self, money):
         if self.use_huabei == True:
-            print("»¨ßÂÖ§¸¶ÁË{0}Ôª!".format(money))
+            print("èŠ±å‘—æ”¯ä»˜äº†{0}å…ƒ!".format(money))
         else:
-            print("Ö§¸¶±¦Óà¶îÖ§¸¶ÁË{0}Ôª!".format(money))
+            print("æ”¯ä»˜å®ä½™é¢æ”¯ä»˜äº†{0}å…ƒ!".format(money))
 
 class WechatPay(Payment):
     def pay(self, money):
-        print("Î¢ĞÅÖ§¸¶ÁË%dÔª!" % (money))
+        print("å¾®ä¿¡æ”¯ä»˜äº†%då…ƒ!" % (money))
 
-# ³éÏó¹¤³§½ÇÉ«
+# æŠ½è±¡å·¥å‚è§’è‰²
 class PaymentFactory(metaclass=ABCMeta):
     @abstractmethod
     def create_payment(self):
         pass
 
-# ¾ßÌå¹¤³§½ÇÉ«
+# å…·ä½“å·¥å‚è§’è‰²
 class AlipayFactory(PaymentFactory):
     def create_payment(self):
         return Alipay()
@@ -41,4 +41,4 @@ class HuabeiFactory(PaymentFactory):
         return Alipay(use_huabei=True)
 
 hfp = HuabeiFactory().create_payment()
-hfp.pay(100)  # »¨ßÂÖ§¸¶ÁË100Ôª!
+hfp.pay(100)  # èŠ±å‘—æ”¯ä»˜äº†100å…ƒ!

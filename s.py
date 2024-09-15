@@ -29,7 +29,7 @@ def save_code_blocks_to_files(dirname, titles:list[str], code_blocks):
     for title, code in zip(titles, code_blocks):
         processed_title:str = title.replace(' ', '_')  # Create a valid file name
         file_name = f".\{dirname}\{processed_title}.py"
-        with open(file_name, 'w') as file:
+        with open(file_name, 'w', encoding='utf-8') as file:
             file.write(code)
         print(f"Saved '{file_name}'")
 

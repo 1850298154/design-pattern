@@ -1,6 +1,6 @@
 from abc import ABCMeta, abstractmethod
 
-# ------³éÏóµÄ²úÆ·------
+# ------æŠ½è±¡çš„äº§å“------
 class PhoneShell(metaclass=ABCMeta):
     @abstractmethod
     def show_shell(self):
@@ -16,40 +16,40 @@ class PhoneOS(metaclass=ABCMeta):
     def show_os(self):
         pass
         
-# ------¾ßÌåµÄ²úÆ·------
+# ------å…·ä½“çš„äº§å“------
 class SmallShell(PhoneShell):
     def show_shell(self):
-        print('ÆÕÍ¨ÊÖ»úĞ¡ÊÖ»ú¿Ç')
+        print('æ™®é€šæ‰‹æœºå°æ‰‹æœºå£³')
 
 class BigShell(PhoneShell):
     def show_shell(self):
-        print('ÆÕÍ¨ÊÖ»ú´óÊÖ»ú¿Ç')
+        print('æ™®é€šæ‰‹æœºå¤§æ‰‹æœºå£³')
 
 class AppleShell(PhoneShell):
     def show_shell(self):
-        print('Æ»¹ûÊÖ»ú¿Ç')
+        print('è‹¹æœæ‰‹æœºå£³')
 
 class SnapDragonCPU(PhoneCPU):
     def show_cpu(self):
-        print('æçÁúCPU')
+        print('éªé¾™CPU')
 
 class HuaweiCPU(PhoneCPU):
     def show_cpu(self):
-        print('»¯ÎªCPU')
+        print('åŒ–ä¸ºCPU')
 
 class AppleCPU(PhoneCPU):
     def show_cpu(self):
-        print('Æ»¹ûCPU')
+        print('è‹¹æœCPU')
 
 class AndroidOS(PhoneOS):
     def show_os(self):
-        print('IOSÏµÍ³')
+        print('IOSç³»ç»Ÿ')
 
 class AppleOS(PhoneOS):
     def show_os(self):
-        print('°²×¿ÏµÍ³')
+        print('å®‰å“ç³»ç»Ÿ')
 
-# ------³éÏóµÄ¹¤³§------
+# ------æŠ½è±¡çš„å·¥å‚------
 class PhoneFactory(metaclass=ABCMeta):
     @abstractmethod
     def make_shell(self):
@@ -63,7 +63,7 @@ class PhoneFactory(metaclass=ABCMeta):
     def make_os(self):
         pass
 
-# ------¾ßÌåµÄ¹¤³§------
+# ------å…·ä½“çš„å·¥å‚------
 class HuaweiFactory(PhoneFactory):
     def make_shell(self):
         return SmallShell()
@@ -84,7 +84,7 @@ class AppleFactory(PhoneFactory):
     def make_os(self):
         return AppleOS()
 
-# ------¿Í»§¶Ë------
+# ------å®¢æˆ·ç«¯------
 class Phone:
     def __init__(self, shell, cpu, os):
         self.shell = shell
@@ -92,7 +92,7 @@ class Phone:
         self.os = os
 
     def show_info(self):
-        print('ÊÖ»úĞÅÏ¢£º')
+        print('æ‰‹æœºä¿¡æ¯ï¼š')
         self.shell.show_shell()
         self.cpu.show_cpu()
         self.os.show_os()
@@ -106,8 +106,8 @@ def make_phone(factory):
 p = make_phone(HuaweiFactory())
 p.show_info()
 """
-ÊÖ»úĞÅÏ¢£º
-ÆÕÍ¨ÊÖ»úĞ¡ÊÖ»ú¿Ç
-»¯ÎªCPU
-IOSÏµÍ³
+æ‰‹æœºä¿¡æ¯ï¼š
+æ™®é€šæ‰‹æœºå°æ‰‹æœºå£³
+åŒ–ä¸ºCPU
+IOSç³»ç»Ÿ
 """

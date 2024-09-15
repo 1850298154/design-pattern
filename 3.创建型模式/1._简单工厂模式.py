@@ -1,29 +1,29 @@
 from abc import ABCMeta, abstractmethod
 
 
-# ³éÏó²úÆ·½ÇÉ«£¬ÒÔÊ²Ã´ÑùµÄ±íÏÖÈ¥Ê¹ÓÃ
+# æŠ½è±¡äº§å“è§’è‰²ï¼Œä»¥ä»€ä¹ˆæ ·çš„è¡¨ç°å»ä½¿ç”¨
 class Payment(metaclass=ABCMeta):
     @abstractmethod
     def pay(self, money):
         pass
 
-# ²úÆ·½ÇÉ«
+# äº§å“è§’è‰²
 class Alipay(Payment):
     def __init__(self, use_huabei=False):
         self.use_huabei = use_huabei
 
     def pay(self, money):
         if self.use_huabei == True:
-            print("»¨ßÂÖ§¸¶ÁË{0}Ôª!".format(money))
+            print("èŠ±å‘—æ”¯ä»˜äº†{0}å…ƒ!".format(money))
         else:
-            print("Ö§¸¶±¦Óà¶îÖ§¸¶ÁË{0}Ôª!".format(money))
+            print("æ”¯ä»˜å®ä½™é¢æ”¯ä»˜äº†{0}å…ƒ!".format(money))
 
-# ²úÆ·½ÇÉ«
+# äº§å“è§’è‰²
 class WechatPay(Payment):
     def pay(self, money):
-        print("Î¢ĞÅÖ§¸¶ÁË%dÔª!" % (money))
+        print("å¾®ä¿¡æ”¯ä»˜äº†%då…ƒ!" % (money))
 
-# ¹¤³§Àà½ÇÉ«
+# å·¥å‚ç±»è§’è‰²
 class PaymentFactory:
     def ctreate_payment(self, method):
         if method == 'Alipay':
@@ -35,7 +35,7 @@ class PaymentFactory:
         else:
             raise TypeError('No such payment named %s' % method)
 
-# ¿Í»§¶Ëµ÷ÓÃ¡£²»Ö±½ÓÏò¿Í»§¶Ë±©Â¶¶ÔÏó´´½¨µÄÊµÏÖÏ¸½Ú£¬¶øÊÇÍ¨¹ıÒ»¸ö¹¤³§ÀàÀ´¸ºÔğ´´½¨²úÆ·ÀàµÄÊµÀı
+# å®¢æˆ·ç«¯è°ƒç”¨ã€‚ä¸ç›´æ¥å‘å®¢æˆ·ç«¯æš´éœ²å¯¹è±¡åˆ›å»ºçš„å®ç°ç»†èŠ‚ï¼Œè€Œæ˜¯é€šè¿‡ä¸€ä¸ªå·¥å‚ç±»æ¥è´Ÿè´£åˆ›å»ºäº§å“ç±»çš„å®ä¾‹
 pf = PaymentFactory()
 p = pf.ctreate_payment('HuabeiPay')
 p.pay(100)

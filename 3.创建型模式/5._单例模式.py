@@ -1,6 +1,6 @@
 from abc import ABCMeta, abstractmethod
 
-# ------²úÆ·------
+# ------äº§å“------
 class Player:
     def __init__(self, face=None, body=None, arms=None, legs=None):
         self.face = face
@@ -11,7 +11,7 @@ class Player:
     def __str__(self):
         return '%s,%s,%s,%s' % (self.face, self.body, self.arms, self.legs)
 
-# ------³éÏó½¨ÔìÕß------
+# ------æŠ½è±¡å»ºé€ è€…------
 class PlayerBuilder(metaclass=ABCMeta):
     @abstractmethod
     def build_face(self):
@@ -29,45 +29,45 @@ class PlayerBuilder(metaclass=ABCMeta):
     def build_legs(self):
         pass
 
-# ------¾ßÌå½¨ÔìÕß,Òş²ØÁËÒ»¸ö²úÆ·µÄÄÚ²¿½á¹¹------
+# ------å…·ä½“å»ºé€ è€…,éšè—äº†ä¸€ä¸ªäº§å“çš„å†…éƒ¨ç»“æ„------
 class GirlBuilder(PlayerBuilder):
     def __init__(self):
         self.player = Player()
 
     def build_face(self):
-        self.player.face = 'Æ¯ÁÁµÄÁ³µ°'
+        self.player.face = 'æ¼‚äº®çš„è„¸è›‹'
 
     def build_body(self):
-        self.player.body = 'ÃçÌõµÄÉí²Ä'
+        self.player.body = 'è‹—æ¡çš„èº«æ'
 
     def build_arms(self):
-        self.player.arms = 'Ï¸Ï¸µÄ¸ì²²'
+        self.player.arms = 'ç»†ç»†çš„èƒ³è†Š'
 
     def build_legs(self):
-        self.player.legs = '´ó³¤ÍÈ'
+        self.player.legs = 'å¤§é•¿è…¿'
 
-# ------¾ßÌå½¨ÔìÕß£¬±íÊ¾´úÂë------
+# ------å…·ä½“å»ºé€ è€…ï¼Œè¡¨ç¤ºä»£ç ------
 class MonsterBuilder(PlayerBuilder):
     def __init__(self):
         self.player = Player()
 
     def build_face(self):
-        self.player.face = 'ÂÌÁ³'
+        self.player.face = 'ç»¿è„¸'
 
     def build_body(self):
-        self.player.body = '¿ıÎàµÄÉíÌå'
+        self.player.body = 'é­æ¢§çš„èº«ä½“'
 
     def build_arms(self):
-        self.player.arms = '´Ö×³µÄ¸ì²²'
+        self.player.arms = 'ç²—å£®çš„èƒ³è†Š'
 
     def build_legs(self):
-        self.player.legs = '´Ö×³µÄ´óÍÈ'
+        self.player.legs = 'ç²—å£®çš„å¤§è…¿'
 
-# ------Ö¸»ÓÕß£¬¹¹Ôì´úÂë(¹¹Ôì´úÂëºÍ±íÊ¾´úÂë·Ö¿ª)£¬¿ÉÒÔ¶Ô¹¹Ôì¹ı³Ì½øĞĞ¸ü¼Ó¾«Ï¸µØ¿ØÖÆ------
+# ------æŒ‡æŒ¥è€…ï¼Œæ„é€ ä»£ç (æ„é€ ä»£ç å’Œè¡¨ç¤ºä»£ç åˆ†å¼€)ï¼Œå¯ä»¥å¯¹æ„é€ è¿‡ç¨‹è¿›è¡Œæ›´åŠ ç²¾ç»†åœ°æ§åˆ¶------
 class PlayerDirectory():
     def builder_player(self, builder):
         """
-        Òş²ØÁË×°Åä¹ı³Ì
+        éšè—äº†è£…é…è¿‡ç¨‹
         :param builder:
         :return:
         """
@@ -77,8 +77,8 @@ class PlayerDirectory():
         builder.build_legs()
         return builder.player
 
-# ------¿Í»§¶Ë------
+# ------å®¢æˆ·ç«¯------
 builder = GirlBuilder()
 director = PlayerDirectory()
 p = director.builder_player(builder)
-print(p)  # Æ¯ÁÁµÄÁ³µ°,ÃçÌõµÄÉí²Ä,Ï¸Ï¸µÄ¸ì²²,´ó³¤ÍÈ
+print(p)  # æ¼‚äº®çš„è„¸è›‹,è‹—æ¡çš„èº«æ,ç»†ç»†çš„èƒ³è†Š,å¤§é•¿è…¿

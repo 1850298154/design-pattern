@@ -11,43 +11,43 @@ class Alipay(Payment):
 
     def pay(self, money):
         if self.use_huabei == True:
-            print("»¨ßÂÖ§¸¶ÁË{0}Ôª!".format(money))
+            print("èŠ±å‘—æ”¯ä»˜äº†{0}å…ƒ!".format(money))
         else:
-            print("Ö§¸¶±¦Óà¶îÖ§¸¶ÁË{0}Ôª!".format(money))
+            print("æ”¯ä»˜å®ä½™é¢æ”¯ä»˜äº†{0}å…ƒ!".format(money))
 
 class WechatPay(Payment):
     def pay(self, money):
-        print("Î¢ĞÅÖ§¸¶ÁË%dÔª!" % (money))
+        print("å¾®ä¿¡æ”¯ä»˜äº†%då…ƒ!" % (money))
 
 class BankPay(Payment):
     def pay(self, money):
-        print("ÒøĞĞÖ§¸¶ÁË%dÔª!" % (money))
+        print("é“¶è¡Œæ”¯ä»˜äº†%då…ƒ!" % (money))
 
-# ´´½¨²úÆ·µÄ¹¤³§ÀàµÄ½Ó¿Ú
+# åˆ›å»ºäº§å“çš„å·¥å‚ç±»çš„æ¥å£
 class PaymentFactory(metaclass=ABCMeta):
     @abstractmethod
     def create_payment(self):
         pass
 
-# ¹¤³§Àà
+# å·¥å‚ç±»
 class AlipayFactory(PaymentFactory):
     def create_payment(self):
         return Alipay()
 
-# ¹¤³§Àà
+# å·¥å‚ç±»
 class WechatPayPayFactory(PaymentFactory):
     def create_payment(self):
         return Alipay()
 
-# ¹¤³§Àà
+# å·¥å‚ç±»
 class HuabeiPayFactory(PaymentFactory):
     def create_payment(self):
         return Alipay(use_huabei=True)
 
-# ĞÂÔö¼ÓÒøĞĞÖ§¸¶µÄ¹¤³§Àà
+# æ–°å¢åŠ é“¶è¡Œæ”¯ä»˜çš„å·¥å‚ç±»
 class BankPayFactory(PaymentFactory):
     def create_payment(self):
         return BankPay()
 
 bfp = BankPayFactory().create_payment()
-bfp.pay(100)  # ÒøĞĞÖ§¸¶ÁË100Ôª!
+bfp.pay(100)  # é“¶è¡Œæ”¯ä»˜äº†100å…ƒ!
