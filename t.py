@@ -89,6 +89,6 @@ def main(md_file_path):
 
 if __name__ == "__main__":
     md_file_path = '3.创建型模式.md'  # Change to your Markdown file path
-    md_file_path = '4.结构型模式.md'  # Change to your Markdown file path
-    md_file_path = '5.行为型模式.md'  # Change to your Markdown file path
+    # md_file_path = '4.结构型模式.md'  # Change to your Markdown file path
+    # md_file_path = '5.行为型模式.md'  # Change to your Markdown file path
     main(md_file_path)

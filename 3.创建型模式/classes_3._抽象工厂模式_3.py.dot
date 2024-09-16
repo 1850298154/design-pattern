@@ -1,0 +1,32 @@
+digraph "classes_3._抽象工厂模式_3.py" {
+rankdir=BT
+charset="utf-8"
+"3._抽象工厂模式.AndroidOS" [color="aliceblue", fontcolor="black", label=<{AndroidOS|<br ALIGN="LEFT"/>|show_os()<br ALIGN="LEFT"/>}>, shape="record", style="filled"];
+"3._抽象工厂模式.AppleCPU" [color="aliceblue", fontcolor="black", label=<{AppleCPU|<br ALIGN="LEFT"/>|show_cpu()<br ALIGN="LEFT"/>}>, shape="record", style="filled"];
+"3._抽象工厂模式.AppleFactory" [color="aliceblue", fontcolor="black", label=<{AppleFactory|<br ALIGN="LEFT"/>|make_cpu()<br ALIGN="LEFT"/>make_os()<br ALIGN="LEFT"/>make_shell()<br ALIGN="LEFT"/>}>, shape="record", style="filled"];
+"3._抽象工厂模式.AppleOS" [color="aliceblue", fontcolor="black", label=<{AppleOS|<br ALIGN="LEFT"/>|show_os()<br ALIGN="LEFT"/>}>, shape="record", style="filled"];
+"3._抽象工厂模式.AppleShell" [color="aliceblue", fontcolor="black", label=<{AppleShell|<br ALIGN="LEFT"/>|show_shell()<br ALIGN="LEFT"/>}>, shape="record", style="filled"];
+"3._抽象工厂模式.BigShell" [color="aliceblue", fontcolor="black", label=<{BigShell|<br ALIGN="LEFT"/>|show_shell()<br ALIGN="LEFT"/>}>, shape="record", style="filled"];
+"3._抽象工厂模式.HuaweiCPU" [color="aliceblue", fontcolor="black", label=<{HuaweiCPU|<br ALIGN="LEFT"/>|show_cpu()<br ALIGN="LEFT"/>}>, shape="record", style="filled"];
+"3._抽象工厂模式.HuaweiFactory" [color="aliceblue", fontcolor="black", label=<{HuaweiFactory|<br ALIGN="LEFT"/>|make_cpu()<br ALIGN="LEFT"/>make_os()<br ALIGN="LEFT"/>make_shell()<br ALIGN="LEFT"/>}>, shape="record", style="filled"];
+"3._抽象工厂模式.Phone" [color="aliceblue", fontcolor="black", label=<{Phone|cpu<br ALIGN="LEFT"/>os<br ALIGN="LEFT"/>shell<br ALIGN="LEFT"/>|show_info()<br ALIGN="LEFT"/>}>, shape="record", style="filled"];
+"3._抽象工厂模式.PhoneCPU" [color="aliceblue", fontcolor="black", label=<{PhoneCPU|<br ALIGN="LEFT"/>|<I>show_cpu</I>()<br ALIGN="LEFT"/>}>, shape="record", style="filled"];
+"3._抽象工厂模式.PhoneFactory" [color="aliceblue", fontcolor="black", label=<{PhoneFactory|<br ALIGN="LEFT"/>|<I>make_cpu</I>()<br ALIGN="LEFT"/><I>make_os</I>()<br ALIGN="LEFT"/><I>make_shell</I>()<br ALIGN="LEFT"/>}>, shape="record", style="filled"];
+"3._抽象工厂模式.PhoneOS" [color="aliceblue", fontcolor="black", label=<{PhoneOS|<br ALIGN="LEFT"/>|<I>show_os</I>()<br ALIGN="LEFT"/>}>, shape="record", style="filled"];
+"3._抽象工厂模式.PhoneShell" [color="aliceblue", fontcolor="black", label=<{PhoneShell|<br ALIGN="LEFT"/>|<I>show_shell</I>()<br ALIGN="LEFT"/>}>, shape="record", style="filled"];
+"3._抽象工厂模式.SmallShell" [color="aliceblue", fontcolor="black", label=<{SmallShell|<br ALIGN="LEFT"/>|show_shell()<br ALIGN="LEFT"/>}>, shape="record", style="filled"];
+"3._抽象工厂模式.SnapDragonCPU" [color="aliceblue", fontcolor="black", label=<{SnapDragonCPU|<br ALIGN="LEFT"/>|show_cpu()<br ALIGN="LEFT"/>}>, shape="record", style="filled"];
+"3._抽象工厂模式.AndroidOS" -> "3._抽象工厂模式.PhoneOS" [arrowhead="empty", arrowtail="none"];
+"3._抽象工厂模式.AppleCPU" -> "3._抽象工厂模式.PhoneCPU" [arrowhead="empty", arrowtail="none"];
+"3._抽象工厂模式.AppleFactory" -> "3._抽象工厂模式.PhoneFactory" [arrowhead="empty", arrowtail="none"];
+"3._抽象工厂模式.AppleOS" -> "3._抽象工厂模式.PhoneOS" [arrowhead="empty", arrowtail="none"];
+"3._抽象工厂模式.AppleShell" -> "3._抽象工厂模式.PhoneShell" [arrowhead="empty", arrowtail="none"];
+"3._抽象工厂模式.BigShell" -> "3._抽象工厂模式.PhoneShell" [arrowhead="empty", arrowtail="none"];
+"3._抽象工厂模式.HuaweiCPU" -> "3._抽象工厂模式.PhoneCPU" [arrowhead="empty", arrowtail="none"];
+"3._抽象工厂模式.HuaweiFactory" -> "3._抽象工厂模式.PhoneFactory" [arrowhead="empty", arrowtail="none"];
+"3._抽象工厂模式.SmallShell" -> "3._抽象工厂模式.PhoneShell" [arrowhead="empty", arrowtail="none"];
+"3._抽象工厂模式.SnapDragonCPU" -> "3._抽象工厂模式.PhoneCPU" [arrowhead="empty", arrowtail="none"];
+"3._抽象工厂模式.PhoneCPU" -> "3._抽象工厂模式.Phone" [arrowhead="odiamond", arrowtail="none", fontcolor="green", label="cpu", style="solid"];
+"3._抽象工厂模式.PhoneOS" -> "3._抽象工厂模式.Phone" [arrowhead="odiamond", arrowtail="none", fontcolor="green", label="os", style="solid"];
+"3._抽象工厂模式.PhoneShell" -> "3._抽象工厂模式.Phone" [arrowhead="odiamond", arrowtail="none", fontcolor="green", label="shell", style="solid"];
+}

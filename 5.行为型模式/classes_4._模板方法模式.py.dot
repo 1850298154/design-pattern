@@ -1,0 +1,8 @@
+digraph "classes_4._模板方法模式.py" {
+rankdir=BT
+bgcolor="#7e7e7e"
+charset="utf-8"
+"4._模板方法模式.MyWindow" [color="black", fontcolor="black", label=<{MyWindow|msg<br ALIGN="LEFT"/>|repaint()<br ALIGN="LEFT"/>start()<br ALIGN="LEFT"/>stop()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"4._模板方法模式.Window" [color="black", fontcolor="black", label=<{Window|<br ALIGN="LEFT"/>|<I>repaint</I>()<br ALIGN="LEFT"/>run()<br ALIGN="LEFT"/><I>start</I>()<br ALIGN="LEFT"/><I>stop</I>()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"4._模板方法模式.MyWindow" -> "4._模板方法模式.Window" [arrowhead="empty", arrowtail="none"];
+}

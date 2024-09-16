@@ -1,0 +1,12 @@
+digraph "classes_4._外观模式.py" {
+rankdir=BT
+bgcolor="#7e7e7e"
+charset="utf-8"
+"4._外观模式.CPU" [color="black", fontcolor="black", label=<{CPU|<br ALIGN="LEFT"/>|run()<br ALIGN="LEFT"/>stop()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"4._外观模式.Computer" [color="black", fontcolor="black", label=<{Computer|CPU<br ALIGN="LEFT"/>Disc<br ALIGN="LEFT"/>Member<br ALIGN="LEFT"/>|run()<br ALIGN="LEFT"/>stop()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"4._外观模式.Disk" [color="black", fontcolor="black", label=<{Disk|<br ALIGN="LEFT"/>|run()<br ALIGN="LEFT"/>stop()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"4._外观模式.Memory" [color="black", fontcolor="black", label=<{Memory|<br ALIGN="LEFT"/>|run()<br ALIGN="LEFT"/>stop()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"4._外观模式.CPU" -> "4._外观模式.Computer" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="CPU", style="solid"];
+"4._外观模式.Disk" -> "4._外观模式.Computer" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="Disc", style="solid"];
+"4._外观模式.Memory" -> "4._外观模式.Computer" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="Member", style="solid"];
+}

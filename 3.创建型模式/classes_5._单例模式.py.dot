@@ -1,0 +1,8 @@
+digraph "classes_5._单例模式.py" {
+rankdir=BT
+bgcolor="#7e7e7e"
+charset="utf-8"
+"5._单例模式.MyClass" [color="black", fontcolor="black", label=<{MyClass|a<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"5._单例模式.Singleton" [color="black", fontcolor="black", label=<{Singleton|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"5._单例模式.MyClass" -> "5._单例模式.Singleton" [arrowhead="empty", arrowtail="none"];
+}

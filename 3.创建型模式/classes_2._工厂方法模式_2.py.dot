@@ -1,0 +1,21 @@
+digraph "classes_2._工厂方法模式_2.py" {
+rankdir=BT
+bgcolor="#7e7e7e"
+charset="utf-8"
+"2._工厂方法模式_2.Alipay" [color="black", fontcolor="black", label=<{Alipay|use_huabei : bool<br ALIGN="LEFT"/>|pay(money)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._工厂方法模式_2.AlipayFactory" [color="black", fontcolor="black", label=<{AlipayFactory|<br ALIGN="LEFT"/>|create_payment()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._工厂方法模式_2.BankPay" [color="black", fontcolor="black", label=<{BankPay|<br ALIGN="LEFT"/>|pay(money)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._工厂方法模式_2.BankPayFactory" [color="black", fontcolor="black", label=<{BankPayFactory|<br ALIGN="LEFT"/>|create_payment()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._工厂方法模式_2.HuabeiPayFactory" [color="black", fontcolor="black", label=<{HuabeiPayFactory|<br ALIGN="LEFT"/>|create_payment()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._工厂方法模式_2.Payment" [color="black", fontcolor="black", label=<{Payment|<br ALIGN="LEFT"/>|<I>pay</I>(money)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._工厂方法模式_2.PaymentFactory" [color="black", fontcolor="black", label=<{PaymentFactory|<br ALIGN="LEFT"/>|<I>create_payment</I>()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._工厂方法模式_2.WechatPay" [color="black", fontcolor="black", label=<{WechatPay|<br ALIGN="LEFT"/>|pay(money)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._工厂方法模式_2.WechatPayPayFactory" [color="black", fontcolor="black", label=<{WechatPayPayFactory|<br ALIGN="LEFT"/>|create_payment()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._工厂方法模式_2.Alipay" -> "2._工厂方法模式_2.Payment" [arrowhead="empty", arrowtail="none"];
+"2._工厂方法模式_2.AlipayFactory" -> "2._工厂方法模式_2.PaymentFactory" [arrowhead="empty", arrowtail="none"];
+"2._工厂方法模式_2.BankPay" -> "2._工厂方法模式_2.Payment" [arrowhead="empty", arrowtail="none"];
+"2._工厂方法模式_2.BankPayFactory" -> "2._工厂方法模式_2.PaymentFactory" [arrowhead="empty", arrowtail="none"];
+"2._工厂方法模式_2.HuabeiPayFactory" -> "2._工厂方法模式_2.PaymentFactory" [arrowhead="empty", arrowtail="none"];
+"2._工厂方法模式_2.WechatPay" -> "2._工厂方法模式_2.Payment" [arrowhead="empty", arrowtail="none"];
+"2._工厂方法模式_2.WechatPayPayFactory" -> "2._工厂方法模式_2.PaymentFactory" [arrowhead="empty", arrowtail="none"];
+}

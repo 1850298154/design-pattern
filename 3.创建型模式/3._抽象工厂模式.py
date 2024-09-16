@@ -1,53 +1,117 @@
 from abc import ABCMeta, abstractmethod
 
-class Payment(metaclass=ABCMeta):
+# ------抽象的产品------
+class PhoneShell(metaclass=ABCMeta):
     @abstractmethod
-    def pay(self, money):
+    def show_shell(self):
         pass
 
-class Alipay(Payment):
-    def __init__(self, use_huabei=False):
-        self.use_huabei = use_huabei
-
-    def pay(self, money):
-        if self.use_huabei == True:
-            print("花呗支付了{0}元!".format(money))
-        else:
-            print("支付宝余额支付了{0}元!".format(money))
-
-class WechatPay(Payment):
-    def pay(self, money):
-        print("微信支付了%d元!" % (money))
-
-class BankPay(Payment):
-    def pay(self, money):
-        print("银行支付了%d元!" % (money))
-
-# 创建产品的工厂类的接口
-class PaymentFactory(metaclass=ABCMeta):
+class PhoneCPU(metaclass=ABCMeta):
     @abstractmethod
-    def create_payment(self):
+    def show_cpu(self):
         pass
 
-# 工厂类
-class AlipayFactory(PaymentFactory):
-    def create_payment(self):
-        return Alipay()
+class PhoneOS(metaclass=ABCMeta):
+    @abstractmethod
+    def show_os(self):
+        pass
+        
+# ------具体的产品------
+class SmallShell(PhoneShell):
+    def show_shell(self):
+        print('普通手机小手机壳')
 
-# 工厂类
-class WechatPayPayFactory(PaymentFactory):
-    def create_payment(self):
-        return Alipay()
+class BigShell(PhoneShell):
+    def show_shell(self):
+        print('普通手机大手机壳')
 
-# 工厂类
-class HuabeiPayFactory(PaymentFactory):
-    def create_payment(self):
-        return Alipay(use_huabei=True)
+class AppleShell(PhoneShell):
+    def show_shell(self):
+        print('苹果手机壳')
 
-# 新增加银行支付的工厂类
-class BankPayFactory(PaymentFactory):
-    def create_payment(self):
-        return BankPay()
+class SnapDragonCPU(PhoneCPU):
+    def show_cpu(self):
+        print('骁龙CPU')
 
-bfp = BankPayFactory().create_payment()
-bfp.pay(100)  # 银行支付了100元!
+class HuaweiCPU(PhoneCPU):
+    def show_cpu(self):
+        print('化为CPU')
+
+class AppleCPU(PhoneCPU):
+    def show_cpu(self):
+        print('苹果CPU')
+
+class AndroidOS(PhoneOS):
+    def show_os(self):
+        print('IOS系统')
+
+class AppleOS(PhoneOS):
+    def show_os(self):
+        print('安卓系统')
+
+# ------抽象的工厂------
+class PhoneFactory(metaclass=ABCMeta):
+    @abstractmethod
+    def make_shell(self):
+        pass
+
+    @abstractmethod
+    def make_cpu(self):
+        pass
+
+    @abstractmethod
+    def make_os(self):
+        pass
+
+# ------具体的工厂------
+class HuaweiFactory(PhoneFactory):
+    def make_shell(self):
+        return SmallShell()
+
+    def make_cpu(self):
+        return HuaweiCPU()
+
+    def make_os(self):
+        return AndroidOS()
+
+class AppleFactory(PhoneFactory):
+    def make_shell(self):
+        return AppleShell()
+
+    def make_cpu(self):
+        return AppleCPU()
+
+    def make_os(self):
+        return AppleOS()
+
+# ------客户端------
+class Phone:
+    def __init__(self, 
+                shell:PhoneShell, 
+                cpu:PhoneCPU, 
+                os:PhoneOS
+                ):
+        self.shell = shell
+        self.cpu = cpu
+        self.os = os
+
+    def show_info(self):
+        print('手机信息：')
+        self.shell.show_shell()
+        self.cpu.show_cpu()
+        self.os.show_os()
+
+def make_phone(factory:PhoneFactory):
+    shell = factory.make_shell()
+    cpu = factory.make_cpu()
+    os = factory.make_os()
+    return Phone(shell, cpu, os)
+
+p = make_phone(HuaweiFactory())
+p.show_info()
+"""
+手机信息：
+普通手机小手机壳
+化为CPU
+IOS系统
+"""

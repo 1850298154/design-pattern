@@ -1,0 +1,12 @@
+digraph "packages" {
+rankdir=BT
+bgcolor="#7e7e7e"
+charset="utf-8"
+"3.创建型模式" [color="black", label=<3.创建型模式>, shape="box", style="solid"];
+"3.创建型模式.1._简单工厂模式" [color="black", label=<3.创建型模式.1._简单工厂模式>, shape="box", style="solid"];
+"3.创建型模式.2._工厂方法模式" [color="black", label=<3.创建型模式.2._工厂方法模式>, shape="box", style="solid"];
+"3.创建型模式.3._抽象工厂模式" [color="black", label=<3.创建型模式.3._抽象工厂模式>, shape="box", style="solid"];
+"3.创建型模式.4._建造者模式" [color="black", label=<3.创建型模式.4._建造者模式>, shape="box", style="solid"];
+"3.创建型模式.5._单例模式" [color="black", label=<3.创建型模式.5._单例模式>, shape="box", style="solid"];
+"3.创建型模式.6._创建型模式概述" [color="black", label=<3.创建型模式.6._创建型模式概述>, shape="box", style="solid"];
+}

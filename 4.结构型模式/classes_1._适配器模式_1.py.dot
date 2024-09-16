@@ -1,0 +1,7 @@
+digraph "classes_1._适配器模式_1.py" {
+rankdir=BT
+bgcolor="#7e7e7e"
+charset="utf-8"
+"1._适配器模式_1.A" [color="black", fontcolor="black", label=<{A|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"1._适配器模式_1.B" [color="black", fontcolor="black", label=<{B|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+}

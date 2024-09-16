@@ -1,0 +1,12 @@
+digraph "classes_5._代理模式_2.py" {
+rankdir=BT
+bgcolor="#7e7e7e"
+charset="utf-8"
+"5._代理模式_2.RealSubject" [color="black", fontcolor="black", label=<{RealSubject|content<br ALIGN="LEFT"/>filename<br ALIGN="LEFT"/>|get_content()<br ALIGN="LEFT"/>set_content(content)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"5._代理模式_2.Subject" [color="black", fontcolor="black", label=<{Subject|<br ALIGN="LEFT"/>|<I>get_content</I>()<br ALIGN="LEFT"/><I>set_content</I>(content)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"5._代理模式_2.VirtualProxy" [color="black", fontcolor="black", label=<{VirtualProxy|filename<br ALIGN="LEFT"/>subj : NoneType<br ALIGN="LEFT"/>|get_content()<br ALIGN="LEFT"/>set_content(content)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"5._代理模式_2.RealSubject" -> "5._代理模式_2.Subject" [arrowhead="empty", arrowtail="none"];
+"5._代理模式_2.VirtualProxy" -> "5._代理模式_2.Subject" [arrowhead="empty", arrowtail="none"];
+"5._代理模式_2.RealSubject" -> "5._代理模式_2.VirtualProxy" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="subj", style="solid"];
+"5._代理模式_2.RealSubject" -> "5._代理模式_2.VirtualProxy" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="subj", style="solid"];
+}

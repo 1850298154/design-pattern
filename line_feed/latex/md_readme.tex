@@ -1,0 +1,34 @@
+\chapter{readme}
+\hypertarget{md_readme}{}\label{md_readme}\index{readme@{readme}}
+在\+Python中，可以使用\+Sphinx来自动生成开发文档。以下是使用\+Sphinx的基本步骤：
+
+安装\+Sphinx：
+
+pip install sphinx
+
+创建一个新目录来存放文档：
+
+mkdir docs cd docs
+
+使用sphinx-\/quickstart命令来配置文档：
+
+sphinx-\/quickstart
+
+这个命令会提示你设置一些基本的文档信息，如项目名称、作者、版本等。
+
+修改source/conf.py文件，可以添加任何\+Sphinx扩展或者修改主题等设置。
+
+在source目录下创建或编辑.\+rst文件，这是\+Sphinx使用的重点标记语言文件，用于编写你的\+API文档、教程等。
+
+使用make html命令来生成\+HTML文档：
+
+make html
+
+生成的文档会在build/html目录下。
+
+以下是一个简单的.\+rst文件示例，它描述了一个名为my\+\_\+module的模块：\hypertarget{md_readme_autotoc_md0}{}\doxysection{\texorpdfstring{my\+\_\+module Module}{my\+\_\+module Module}}\label{md_readme_autotoc_md0}
+.. automodule\+:\+: my\+\_\+module \+:members\+: \+:undoc-\/members\+: \+:show-\/inheritance\+:
+
+使用.. automodule\+::指令，\+Sphinx将自动提取my\+\_\+module中的文档字符串和公有成员，并生成相应的\+API文档。
+
+这只是一个基本的介绍，\+Sphinx还有更多高级功能，如支持多种输出格式（\+HTML, La\+TeX, PDF等）、国际化支持、代码示例和图表等。 

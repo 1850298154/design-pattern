@@ -1,0 +1,11 @@
+digraph "classes_3._策略模式.py" {
+rankdir=BT
+bgcolor="#7e7e7e"
+charset="utf-8"
+"3._策略模式.Context" [color="black", fontcolor="black", label=<{Context|data<br ALIGN="LEFT"/>date : datetime<br ALIGN="LEFT"/>strategy<br ALIGN="LEFT"/>|do_strategy()<br ALIGN="LEFT"/>set_strategy(strategy)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"3._策略模式.FastStrategy" [color="black", fontcolor="black", label=<{FastStrategy|<br ALIGN="LEFT"/>|execute(data)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"3._策略模式.SlowStrategy" [color="black", fontcolor="black", label=<{SlowStrategy|<br ALIGN="LEFT"/>|execute(data)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"3._策略模式.Strategy" [color="black", fontcolor="black", label=<{Strategy|<br ALIGN="LEFT"/>|<I>execute</I>(data)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"3._策略模式.FastStrategy" -> "3._策略模式.Strategy" [arrowhead="empty", arrowtail="none"];
+"3._策略模式.SlowStrategy" -> "3._策略模式.Strategy" [arrowhead="empty", arrowtail="none"];
+}

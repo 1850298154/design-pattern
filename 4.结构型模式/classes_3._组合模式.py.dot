@@ -1,0 +1,12 @@
+digraph "classes_3._组合模式.py" {
+rankdir=BT
+bgcolor="#7e7e7e"
+charset="utf-8"
+"3._组合模式.Graphic" [color="black", fontcolor="black", label=<{Graphic|<br ALIGN="LEFT"/>|<I>draw</I>()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"3._组合模式.Line" [color="black", fontcolor="black", label=<{Line|p1<br ALIGN="LEFT"/>p2<br ALIGN="LEFT"/>|draw()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"3._组合模式.Picture" [color="black", fontcolor="black", label=<{Picture|children : list<br ALIGN="LEFT"/>|add(graphic)<br ALIGN="LEFT"/>draw()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"3._组合模式.Point" [color="black", fontcolor="black", label=<{Point|x<br ALIGN="LEFT"/>y<br ALIGN="LEFT"/>|draw()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"3._组合模式.Line" -> "3._组合模式.Graphic" [arrowhead="empty", arrowtail="none"];
+"3._组合模式.Picture" -> "3._组合模式.Graphic" [arrowhead="empty", arrowtail="none"];
+"3._组合模式.Point" -> "3._组合模式.Graphic" [arrowhead="empty", arrowtail="none"];
+}

@@ -1,0 +1,12 @@
+digraph "classes_1._适配器模式_2.py" {
+rankdir=BT
+bgcolor="#7e7e7e"
+charset="utf-8"
+"1._适配器模式_2.Alipay" [color="black", fontcolor="black", label=<{Alipay|<br ALIGN="LEFT"/>|pay(money)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"1._适配器模式_2.BankPay" [color="black", fontcolor="black", label=<{BankPay|<br ALIGN="LEFT"/>|cost(money)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"1._适配器模式_2.Payment" [color="black", fontcolor="black", label=<{Payment|<br ALIGN="LEFT"/>|<I>pay</I>(money)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"1._适配器模式_2.PaymentAdapter" [color="black", fontcolor="black", label=<{PaymentAdapter|<br ALIGN="LEFT"/>|pay(money)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"1._适配器模式_2.Alipay" -> "1._适配器模式_2.Payment" [arrowhead="empty", arrowtail="none"];
+"1._适配器模式_2.PaymentAdapter" -> "1._适配器模式_2.BankPay" [arrowhead="empty", arrowtail="none"];
+"1._适配器模式_2.PaymentAdapter" -> "1._适配器模式_2.Payment" [arrowhead="empty", arrowtail="none"];
+}

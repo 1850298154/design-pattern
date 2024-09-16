@@ -1,0 +1,11 @@
+digraph "classes_1._简单工厂模式.py" {
+rankdir=BT
+bgcolor="#7e7e7e"
+charset="utf-8"
+"1._简单工厂模式.Alipay" [color="black", fontcolor="black", label=<{Alipay|use_huabei : bool<br ALIGN="LEFT"/>|pay(money)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"1._简单工厂模式.Payment" [color="black", fontcolor="black", label=<{Payment|<br ALIGN="LEFT"/>|<I>pay</I>(money)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"1._简单工厂模式.PaymentFactory" [color="black", fontcolor="black", label=<{PaymentFactory|<br ALIGN="LEFT"/>|ctreate_payment(method)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"1._简单工厂模式.WechatPay" [color="black", fontcolor="black", label=<{WechatPay|<br ALIGN="LEFT"/>|pay(money)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"1._简单工厂模式.Alipay" -> "1._简单工厂模式.Payment" [arrowhead="empty", arrowtail="none"];
+"1._简单工厂模式.WechatPay" -> "1._简单工厂模式.Payment" [arrowhead="empty", arrowtail="none"];
+}

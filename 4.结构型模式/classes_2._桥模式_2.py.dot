@@ -1,0 +1,15 @@
+digraph "classes_2._桥模式_2.py" {
+rankdir=BT
+bgcolor="#7e7e7e"
+charset="utf-8"
+"2._桥模式_2.Circle" [color="black", fontcolor="black", label=<{Circle|name : str<br ALIGN="LEFT"/>|draw()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._桥模式_2.Color" [color="black", fontcolor="black", label=<{Color|<br ALIGN="LEFT"/>|<I>paint</I>(shape)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._桥模式_2.Green" [color="black", fontcolor="black", label=<{Green|<br ALIGN="LEFT"/>|paint(shape)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._桥模式_2.Rectangle" [color="black", fontcolor="black", label=<{Rectangle|name : str<br ALIGN="LEFT"/>|draw()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._桥模式_2.Red" [color="black", fontcolor="black", label=<{Red|<br ALIGN="LEFT"/>|paint(shape)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._桥模式_2.Shape" [color="black", fontcolor="black", label=<{Shape|color<br ALIGN="LEFT"/>|<I>draw</I>()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._桥模式_2.Circle" -> "2._桥模式_2.Shape" [arrowhead="empty", arrowtail="none"];
+"2._桥模式_2.Green" -> "2._桥模式_2.Color" [arrowhead="empty", arrowtail="none"];
+"2._桥模式_2.Rectangle" -> "2._桥模式_2.Shape" [arrowhead="empty", arrowtail="none"];
+"2._桥模式_2.Red" -> "2._桥模式_2.Color" [arrowhead="empty", arrowtail="none"];
+}

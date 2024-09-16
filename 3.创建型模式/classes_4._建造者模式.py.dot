@@ -1,0 +1,14 @@
+digraph "classes_4._建造者模式.py" {
+rankdir=BT
+bgcolor="#7e7e7e"
+charset="utf-8"
+"4._建造者模式.GirlBuilder" [color="black", fontcolor="black", label=<{GirlBuilder|player<br ALIGN="LEFT"/>|build_arms()<br ALIGN="LEFT"/>build_body()<br ALIGN="LEFT"/>build_face()<br ALIGN="LEFT"/>build_legs()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"4._建造者模式.MonsterBuilder" [color="black", fontcolor="black", label=<{MonsterBuilder|player<br ALIGN="LEFT"/>|build_arms()<br ALIGN="LEFT"/>build_body()<br ALIGN="LEFT"/>build_face()<br ALIGN="LEFT"/>build_legs()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"4._建造者模式.Player" [color="black", fontcolor="black", label=<{Player|arms : NoneType, str<br ALIGN="LEFT"/>body : str, NoneType<br ALIGN="LEFT"/>face : NoneType, str<br ALIGN="LEFT"/>legs : str, NoneType<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"4._建造者模式.PlayerBuilder" [color="black", fontcolor="black", label=<{PlayerBuilder|<br ALIGN="LEFT"/>|<I>build_arms</I>()<br ALIGN="LEFT"/><I>build_body</I>()<br ALIGN="LEFT"/><I>build_face</I>()<br ALIGN="LEFT"/><I>build_legs</I>()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"4._建造者模式.PlayerDirectory" [color="black", fontcolor="black", label=<{PlayerDirectory|<br ALIGN="LEFT"/>|builder_player(builder)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"4._建造者模式.GirlBuilder" -> "4._建造者模式.PlayerBuilder" [arrowhead="empty", arrowtail="none"];
+"4._建造者模式.MonsterBuilder" -> "4._建造者模式.PlayerBuilder" [arrowhead="empty", arrowtail="none"];
+"4._建造者模式.Player" -> "4._建造者模式.GirlBuilder" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="player", style="solid"];
+"4._建造者模式.Player" -> "4._建造者模式.MonsterBuilder" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="player", style="solid"];
+}
