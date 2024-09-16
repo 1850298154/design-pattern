@@ -1,0 +1,10 @@
+digraph "classes_6._原型模式.py" {
+rankdir=BT
+bgcolor="#7e7e7e"
+charset="utf-8"
+"6._原型模式.ConcretePrototype1" [color="black", fontcolor="black", label=<{ConcretePrototype1|field1 : str<br ALIGN="LEFT"/>field2<br ALIGN="LEFT"/>|clone()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"6._原型模式.ConcretePrototype2" [color="black", fontcolor="black", label=<{ConcretePrototype2|field1 : str<br ALIGN="LEFT"/>field2<br ALIGN="LEFT"/>|clone()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"6._原型模式.Prototype" [color="black", fontcolor="black", label=<{Prototype|<br ALIGN="LEFT"/>|<I>clone</I>()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"6._原型模式.ConcretePrototype1" -> "6._原型模式.Prototype" [arrowhead="empty", arrowtail="none"];
+"6._原型模式.ConcretePrototype2" -> "6._原型模式.Prototype" [arrowhead="empty", arrowtail="none"];
+}

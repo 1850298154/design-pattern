@@ -8,8 +8,10 @@ pyreverse  5._单例模式.py          -p  5._单例模式.py
 
 pyreverse  6._原型模式.py          -p  6._原型模式.py
 
+pyreverse  2._工厂方法模式_3.py    -p  2._工厂方法模式_3.py
 
 pyreverse  3._抽象工厂模式.py      -p  3._抽象工厂模式_2.py
+pyreverse  4._建造者模式.py        -p  4._建造者模式_2.py
 
 
 @REM  结构型模式

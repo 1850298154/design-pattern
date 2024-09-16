@@ -2,5 +2,5 @@ class A:
 	pass
 	
 class B:
-	def __init__():
+	def __init__(self):
 		self.a = A()

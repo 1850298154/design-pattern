@@ -1,0 +1,16 @@
+digraph "classes_2._工厂方法模式_3.py" {
+rankdir=BT
+bgcolor="#7e7e7e"
+
+charset="utf-8"
+"2._工厂方法模式_3.ConcreteCreatorA" [color="black", fontcolor="black", label=<{ConcreteCreatorA|<br ALIGN="LEFT"/>|factory_method(): Product<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._工厂方法模式_3.ConcreteCreatorB" [color="black", fontcolor="black", label=<{ConcreteCreatorB|<br ALIGN="LEFT"/>|factory_method(): Product<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._工厂方法模式_3.ConcreteProductA" [color="black", fontcolor="black", label=<{ConcreteProductA|<br ALIGN="LEFT"/>|operation()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._工厂方法模式_3.ConcreteProductB" [color="black", fontcolor="black", label=<{ConcreteProductB|<br ALIGN="LEFT"/>|operation()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._工厂方法模式_3.Creator" [color="black", fontcolor="black", label=<{Creator|<br ALIGN="LEFT"/>|<I>factory_method</I>(): Product<br ALIGN="LEFT"/>some_operation()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._工厂方法模式_3.Product" [color="black", fontcolor="black", label=<{Product|<br ALIGN="LEFT"/>|<I>operation</I>()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._工厂方法模式_3.ConcreteCreatorA" -> "2._工厂方法模式_3.Creator" [arrowhead="empty", arrowtail="none"];
+"2._工厂方法模式_3.ConcreteCreatorB" -> "2._工厂方法模式_3.Creator" [arrowhead="empty", arrowtail="none"];
+"2._工厂方法模式_3.ConcreteProductA" -> "2._工厂方法模式_3.Product" [arrowhead="empty", arrowtail="none"];
+"2._工厂方法模式_3.ConcreteProductB" -> "2._工厂方法模式_3.Product" [arrowhead="empty", arrowtail="none"];
+}

@@ -62,20 +62,20 @@ class MonsterBuilder(PlayerBuilder):
 
     def build_legs(self):
         self.player.legs = '粗壮的大腿'
-
+from typing import Union
 # ------指挥者，构造代码(构造代码和表示代码分开)，可以对构造过程进行更加精细地控制------
 class PlayerDirectory():
-    def builder_player(self, builder):
+    def builder_player(self, player_builder:Union[PlayerBuilder,GirlBuilder,MonsterBuilder]):
         """
         隐藏了装配过程
-        :param builder:
+        :param player_builder:
         :return:
         """
-        builder.build_face()
-        builder.build_body()
-        builder.build_arms()
-        builder.build_legs()
-        return builder.player
+        player_builder.build_face()
+        player_builder.build_body()
+        player_builder.build_arms()
+        player_builder.build_legs()
+        return player_builder.player
 
 # ------客户端------
 builder = GirlBuilder()
