@@ -1,0 +1,12 @@
+digraph "classes_5._命令模式.py" {
+rankdir=BT
+bgcolor="#7e7e7e"
+charset="utf-8"
+"5._命令模式.Command" [color="black", fontcolor="black", label=<{Command|<br ALIGN="LEFT"/>|<I>execute</I>()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"5._命令模式.Light" [color="black", fontcolor="black", label=<{Light|<br ALIGN="LEFT"/>|off()<br ALIGN="LEFT"/>on()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"5._命令模式.LightOffCommand" [color="black", fontcolor="black", label=<{LightOffCommand|light<br ALIGN="LEFT"/>|execute()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"5._命令模式.LightOnCommand" [color="black", fontcolor="black", label=<{LightOnCommand|light<br ALIGN="LEFT"/>|execute()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"5._命令模式.RemoteControl" [color="black", fontcolor="black", label=<{RemoteControl|command : NoneType<br ALIGN="LEFT"/>|press_button()<br ALIGN="LEFT"/>set_command(command)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"5._命令模式.LightOffCommand" -> "5._命令模式.Command" [arrowhead="empty", arrowtail="none"];
+"5._命令模式.LightOnCommand" -> "5._命令模式.Command" [arrowhead="empty", arrowtail="none"];
+}

@@ -1,0 +1,12 @@
+digraph "classes_11._状态模式.py" {
+rankdir=BT
+bgcolor="#7e7e7e"
+charset="utf-8"
+"11._状态模式.ConcreteStateA" [color="black", fontcolor="black", label=<{ConcreteStateA|<br ALIGN="LEFT"/>|handle(context)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"11._状态模式.ConcreteStateB" [color="black", fontcolor="black", label=<{ConcreteStateB|<br ALIGN="LEFT"/>|handle(context)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"11._状态模式.Context" [color="black", fontcolor="black", label=<{Context|<br ALIGN="LEFT"/>|request()<br ALIGN="LEFT"/>set_state(state: State)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"11._状态模式.State" [color="black", fontcolor="black", label=<{State|<br ALIGN="LEFT"/>|<I>handle</I>(context)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"11._状态模式.ConcreteStateA" -> "11._状态模式.State" [arrowhead="empty", arrowtail="none"];
+"11._状态模式.ConcreteStateB" -> "11._状态模式.State" [arrowhead="empty", arrowtail="none"];
+"11._状态模式.State" -> "11._状态模式.Context" [arrowhead="odiamond", arrowtail="none", fontcolor="green", label="_state", style="solid"];
+}

@@ -1,0 +1,14 @@
+digraph "classes_6._中介者模式_2.py" {
+rankdir=BT
+charset="utf-8"
+"6._中介者模式.BaseComponent" [color="black", fontcolor="black", label=<{6._中介者模式.BaseComponent|<br ALIGN="LEFT"/>|set_mediator(mediator)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"6._中介者模式.Component1" [color="black", fontcolor="black", label=<{6._中介者模式.Component1|<br ALIGN="LEFT"/>|do_a()<br ALIGN="LEFT"/>do_b()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"6._中介者模式.Component2" [color="black", fontcolor="black", label=<{6._中介者模式.Component2|<br ALIGN="LEFT"/>|do_c()<br ALIGN="LEFT"/>do_d()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"6._中介者模式.ConcreteMediator" [color="black", fontcolor="black", label=<{6._中介者模式.ConcreteMediator|<br ALIGN="LEFT"/>|notify(sender, event)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"6._中介者模式.Mediator" [color="black", fontcolor="black", label=<{6._中介者模式.Mediator|<br ALIGN="LEFT"/>|<I>notify</I>(sender, event)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"abc.ABC" [color="black", fontcolor="black", label=<{abc.ABC|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"6._中介者模式.Component1" -> "6._中介者模式.BaseComponent" [arrowhead="empty", arrowtail="none"];
+"6._中介者模式.Component2" -> "6._中介者模式.BaseComponent" [arrowhead="empty", arrowtail="none"];
+"6._中介者模式.ConcreteMediator" -> "6._中介者模式.Mediator" [arrowhead="empty", arrowtail="none"];
+"6._中介者模式.Mediator" -> "abc.ABC" [arrowhead="empty", arrowtail="none"];
+}

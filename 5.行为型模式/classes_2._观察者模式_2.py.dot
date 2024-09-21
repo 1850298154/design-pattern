@@ -1,11 +1,11 @@
-digraph "classes_2._观察者模式.py" {
+digraph "classes_2._观察者模式_2.py" {
 rankdir=BT
 bgcolor="#7e7e7e"
 bgcolor="#7e7e7e"
 charset="utf-8"
-"2._观察者模式.Notice" [color="black", fontcolor="black", label=<{Notice|observers : list<br ALIGN="LEFT"/>|attach(obs)<br ALIGN="LEFT"/>detach(obs)<br ALIGN="LEFT"/>notify()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._观察者模式.Notice" [color="black", fontcolor="black", label=<{Notice|observers : list[Observer]<br ALIGN="LEFT"/>|attach(obs)<br ALIGN="LEFT"/>detach(obs)<br ALIGN="LEFT"/>notify()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
 "2._观察者模式.Observer" [color="black", fontcolor="black", label=<{Observer|<br ALIGN="LEFT"/>|<I>update</I>(notice)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
-"2._观察者模式.Staff" [color="black", fontcolor="black", label=<{Staff|company_info : NoneType<br ALIGN="LEFT"/>|update(notice)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"2._观察者模式.Staff" [color="black", fontcolor="black", label=<{Staff|company_info : NoneType<br ALIGN="LEFT"/>|update(notice: StaffNotice)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
 "2._观察者模式.StaffNotice" [color="black", fontcolor="black", label=<{StaffNotice|company_info<br ALIGN="LEFT"/>company_info : str<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
 "2._观察者模式.Staff" -> "2._观察者模式.Observer" [arrowhead="empty", arrowtail="none"];
 "2._观察者模式.StaffNotice" -> "2._观察者模式.Notice" [arrowhead="empty", arrowtail="none"];

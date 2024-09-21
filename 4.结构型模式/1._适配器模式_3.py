@@ -20,10 +20,10 @@ class BankPay():
 class ApplePay():
     def cost(self, money):
         print('苹果支付了%d' % money)
-
+from typing import Union
 # 对象适配器
 class PaymentAdapter(Payment):
-    def __init__(self, payment):
+    def __init__(self, payment: Union[ApplePay, BankPay]):
         self.payment = payment
 
     def pay(self, money):

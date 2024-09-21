@@ -1,0 +1,8 @@
+digraph "classes_10._备忘录模式.py" {
+rankdir=BT
+bgcolor="#7e7e7e"
+charset="utf-8"
+"10._备忘录模式.Caretaker" [color="black", fontcolor="black", label=<{Caretaker|<br ALIGN="LEFT"/>|add(state: Memento)<br ALIGN="LEFT"/>get(index: int): Memento<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"10._备忘录模式.Memento" [color="black", fontcolor="black", label=<{Memento|<br ALIGN="LEFT"/>|get_state(): str<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"10._备忘录模式.Originator" [color="black", fontcolor="black", label=<{Originator|<br ALIGN="LEFT"/>|get_state(): str<br ALIGN="LEFT"/>get_state_from_memento(memento: Memento)<br ALIGN="LEFT"/>save_state_to_memento(): Memento<br ALIGN="LEFT"/>set_state(state: str)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+}

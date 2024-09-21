@@ -1,0 +1,13 @@
+digraph "classes_6._中介者模式.py" {
+rankdir=BT
+bgcolor="#7e7e7e"
+charset="utf-8"
+"6._中介者模式.BaseComponent" [color="black", fontcolor="black", label=<{BaseComponent|<br ALIGN="LEFT"/>|set_mediator(mediator)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"6._中介者模式.Component1" [color="black", fontcolor="black", label=<{Component1|<br ALIGN="LEFT"/>|do_a()<br ALIGN="LEFT"/>do_b()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"6._中介者模式.Component2" [color="black", fontcolor="black", label=<{Component2|<br ALIGN="LEFT"/>|do_c()<br ALIGN="LEFT"/>do_d()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"6._中介者模式.ConcreteMediator" [color="black", fontcolor="black", label=<{ConcreteMediator|<br ALIGN="LEFT"/>|notify(sender, event)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"6._中介者模式.Mediator" [color="black", fontcolor="black", label=<{Mediator|<br ALIGN="LEFT"/>|<I>notify</I>(sender, event)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"6._中介者模式.Component1" -> "6._中介者模式.BaseComponent" [arrowhead="empty", arrowtail="none"];
+"6._中介者模式.Component2" -> "6._中介者模式.BaseComponent" [arrowhead="empty", arrowtail="none"];
+"6._中介者模式.ConcreteMediator" -> "6._中介者模式.Mediator" [arrowhead="empty", arrowtail="none"];
+}

@@ -1,6 +1,7 @@
 digraph "classes_1._责任链模式.py" {
 rankdir=BT
 bgcolor="#7e7e7e"
+bgcolor="#7e7e7e"
 charset="utf-8"
 "1._责任链模式.DepartmentManager" [color="black", fontcolor="black", label=<{DepartmentManager|next<br ALIGN="LEFT"/>|handle_leave(day)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
 "1._责任链模式.GeneralManager" [color="black", fontcolor="black", label=<{GeneralManager|<br ALIGN="LEFT"/>|handle_leave(day)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];

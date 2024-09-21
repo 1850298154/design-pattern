@@ -34,14 +34,21 @@ pyreverse  2._观察者模式.py     -p  2._观察者模式.py
 pyreverse  3._策略模式.py       -p  3._策略模式.py        
 pyreverse  4._模板方法模式.py   -p  4._模板方法模式.py    
 
+pyreverse  2._观察者模式.py     -p  2._观察者模式_2.py      
+
 @REM 行为型模式
-pyreverse  1._状态模式.py       -p  1._状态模式.py
-pyreverse  2._访问者模式.py     -p  2._访问者模式.py
-pyreverse  3._备忘录模式.py     -p  3._备忘录模式.py
-pyreverse  4._解释器模式.py     -p  4._解释器模式.py
 pyreverse  5._命令模式.py       -p  5._命令模式.py
 pyreverse  6._中介者模式.py     -p  6._中介者模式.py
 pyreverse  7._迭代器模式.py     -p  7._迭代器模式.py
 pyreverse  8._访问者模式.py     -p  8._访问者模式.py
+pyreverse  9._解释器模式.py     -p  9._解释器模式.py
+pyreverse  10._备忘录模式.py     -p  10._备忘录模式.py
+pyreverse  11._状态模式.py       -p  11._状态模式.py
+pyreverse  12._访问者模式.py     -p  12._访问者模式.py
 
 
+pyreverse  6._中介者模式.py     -p  6._中介者模式_2.py -ASmy 
+
+
+python -m cProfile -o 6._中介者模式.prof 6._中介者模式.py
+snakeviz 6._中介者模式.prof

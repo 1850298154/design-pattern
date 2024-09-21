@@ -25,7 +25,7 @@ class Context:
         # 可以定义用户不知道的东西
         self.date = datetime.now()
 
-    def set_strategy(self, strategy):
+    def set_strategy(self, strategy:Strategy):
         self.strategy = strategy
 
     def do_strategy(self):

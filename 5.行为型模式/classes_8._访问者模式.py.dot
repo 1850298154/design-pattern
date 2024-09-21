@@ -1,0 +1,15 @@
+digraph "classes_8._访问者模式.py" {
+rankdir=BT
+bgcolor="#7e7e7e"
+charset="utf-8"
+"8._访问者模式.ConcreteElementA" [color="black", fontcolor="black", label=<{ConcreteElementA|<br ALIGN="LEFT"/>|accept(visitor: Visitor)<br ALIGN="LEFT"/>operation_a()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"8._访问者模式.ConcreteElementB" [color="black", fontcolor="black", label=<{ConcreteElementB|<br ALIGN="LEFT"/>|accept(visitor: Visitor)<br ALIGN="LEFT"/>operation_b()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"8._访问者模式.ConcreteVisitor1" [color="black", fontcolor="black", label=<{ConcreteVisitor1|<br ALIGN="LEFT"/>|visit_concrete_element_a(element)<br ALIGN="LEFT"/>visit_concrete_element_b(element)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"8._访问者模式.ConcreteVisitor2" [color="black", fontcolor="black", label=<{ConcreteVisitor2|<br ALIGN="LEFT"/>|visit_concrete_element_a(element)<br ALIGN="LEFT"/>visit_concrete_element_b(element)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"8._访问者模式.Element" [color="black", fontcolor="black", label=<{Element|<br ALIGN="LEFT"/>|<I>accept</I>(visitor: Visitor)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"8._访问者模式.Visitor" [color="black", fontcolor="black", label=<{Visitor|<br ALIGN="LEFT"/>|<I>visit_concrete_element_a</I>(element)<br ALIGN="LEFT"/><I>visit_concrete_element_b</I>(element)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"8._访问者模式.ConcreteElementA" -> "8._访问者模式.Element" [arrowhead="empty", arrowtail="none"];
+"8._访问者模式.ConcreteElementB" -> "8._访问者模式.Element" [arrowhead="empty", arrowtail="none"];
+"8._访问者模式.ConcreteVisitor1" -> "8._访问者模式.Visitor" [arrowhead="empty", arrowtail="none"];
+"8._访问者模式.ConcreteVisitor2" -> "8._访问者模式.Visitor" [arrowhead="empty", arrowtail="none"];
+}

@@ -1,0 +1,12 @@
+digraph "classes_9._解释器模式.py" {
+rankdir=BT
+bgcolor="#7e7e7e"
+charset="utf-8"
+"9._解释器模式.AbstractExpression" [color="black", fontcolor="black", label=<{AbstractExpression|<br ALIGN="LEFT"/>|<I>interpret</I>(context)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"9._解释器模式.AndExpression" [color="black", fontcolor="black", label=<{AndExpression|expr1<br ALIGN="LEFT"/>expr2<br ALIGN="LEFT"/>|interpret(context)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"9._解释器模式.OrExpression" [color="black", fontcolor="black", label=<{OrExpression|expr1<br ALIGN="LEFT"/>expr2<br ALIGN="LEFT"/>|interpret(context)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"9._解释器模式.TerminalExpression" [color="black", fontcolor="black", label=<{TerminalExpression|data<br ALIGN="LEFT"/>|interpret(context)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"9._解释器模式.AndExpression" -> "9._解释器模式.AbstractExpression" [arrowhead="empty", arrowtail="none"];
+"9._解释器模式.OrExpression" -> "9._解释器模式.AbstractExpression" [arrowhead="empty", arrowtail="none"];
+"9._解释器模式.TerminalExpression" -> "9._解释器模式.AbstractExpression" [arrowhead="empty", arrowtail="none"];
+}

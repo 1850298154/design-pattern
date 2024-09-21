@@ -13,7 +13,7 @@ class Observer(metaclass=ABCMeta):
 # 抽象的发布者：可以是接口，子类不需要实现，所以不需要定义抽象方法！
 class Notice:
     def __init__(self):
-        self.observers = []
+        self.observers:list[Observer] = []
 
     def attach(self, obs):
         self.observers.append(obs)
@@ -49,7 +49,7 @@ class Staff(Observer):
     def __init__(self):
         self.company_info = None
 
-    def update(self, notice):
+    def update(self, notice:StaffNotice):
         self.company_info = notice.company_info
 
 staff_notice = StaffNotice('初始化公司信息')
@@ -57,8 +57,8 @@ staff1 = Staff()
 staff2 = Staff()
 staff_notice.attach(staff1)
 staff_notice.attach(staff2)
-# print(staff1.company_info) None
-# print(staff2.company_info) None
+print(staff1.company_info) # None
+print(staff2.company_info) # None
 staff_notice.company_info = '假期放假通知！'
 print(staff1.company_info)
 print(staff2.company_info)
@@ -67,8 +67,16 @@ staff_notice.company_info = '明天开会！'
 print(staff1.company_info)
 print(staff2.company_info)
 """
+None
+None
 假期放假通知！
 假期放假通知！
 明天开会！
 假期放假通知！
+
+company_info (40)
+update (53)
+notify (30)
+company_info (45)
+<module> (66)
 """

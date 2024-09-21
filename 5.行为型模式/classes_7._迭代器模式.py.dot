@@ -1,0 +1,7 @@
+digraph "classes_7._迭代器模式.py" {
+rankdir=BT
+bgcolor="#7e7e7e"
+charset="utf-8"
+"7._迭代器模式.AlphabeticalOrderIterator" [color="black", fontcolor="black", label=<{AlphabeticalOrderIterator|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"7._迭代器模式.WordsCollection" [color="black", fontcolor="black", label=<{WordsCollection|<br ALIGN="LEFT"/>|add_item(item)<br ALIGN="LEFT"/>get_reverse_iterator()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+}
